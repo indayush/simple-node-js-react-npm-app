@@ -1,12 +1,10 @@
 pipeline {
-    
-    environment {
-        CI = 'true'
-    }
+    agent any
     stages {
         stage('Build') {
             steps {
-                sh 'npm install'
+                sh 'sudo npm install'
+                sh 'sudo npm start'
             }
         }
     }
